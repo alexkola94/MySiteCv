@@ -3,10 +3,28 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Alex Alfons Kola</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alexios Kola - Full Stack Web Developer with 2+ years experience in C#, JavaScript, .NET, and modern web technologies. Based in Athens, Greece.">
+  <meta name="keywords" content="Full Stack Developer, Web Developer, C#, JavaScript, .NET, Knockout.js, Athens, Greece, Software Engineer">
+  <meta name="author" content="Alexios Kola">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alexios Kola - Full Stack Web Developer">
+  <meta property="og:description" content="Full Stack Developer with 2+ years experience in C#, JavaScript, .NET, and modern web technologies.">
+  <meta property="og:image" content="https://your-domain.com/1674450168751.jpeg">
+  <meta property="og:url" content="https://your-domain.com">
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alexios Kola - Full Stack Web Developer">
+  <meta name="twitter:description" content="Full Stack Developer with 2+ years experience in C#, JavaScript, .NET, and modern web technologies.">
+  <meta name="twitter:image" content="https://your-domain.com/1674450168751.jpeg">
+  
+  <title>Alexios Kola - Full Stack Web Developer | Athens, Greece</title>
   <link rel="stylesheet" href="Css/styles.css">
-  </link>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://your-domain.com">
 
 
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -24,8 +42,52 @@
 </head>
 
 <body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-brand">Alexios Kola</a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fas fa-moon" id="theme-icon"></i>
+      </button>
+      <div class="nav-toggle" id="nav-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
 
-  <div class="top-container">
+  <!-- Loading Screen -->
+  <div class="loading-screen" id="loading-screen">
+    <div class="loading-spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Download CV Button -->
+  <a class="download-cv-btn"
+     href="https://drive.google.com/file/d/12zcxmNhqx-Y7YesbxMNR0ZIIzJKSpXjR/view?usp=sharing"
+     download
+     aria-label="Download my CV (PDF)"
+     target="_blank">
+    <span class="label">Download CV</span>
+    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h1zM5 19h14v2H5z"/>
+    </svg>
+  </a>
+
+  <!-- Animated Code Particles Background -->
+  <div class="code-particles" id="code-particles"></div>
+
+  <main>
+    <section id="home" class="top-container">
   <!-- HERO / HEADER -->
   <img src="1674450168751.jpeg" alt="Alexios Kola" class="profile-img">
   <div class="top-container">
@@ -50,20 +112,9 @@
   </div>
 </div>
 
+  </section>
 
-<a class="download-cv-btn"
-   href="https://drive.google.com/file/d/12zcxmNhqx-Y7YesbxMNR0ZIIzJKSpXjR/view?usp=sharing"
-   download
-   aria-label="Download my CV (PDF)"
-   target="_blank">
-  <span class="label">Download CV</span>
-  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-    <path d="M12 3v10.17l3.59-3.58L17 11l-5 5-5-5 1.41-1.41L11 13.17V3h1zM5 19h14v2H5z"/>
-  </svg>
-</a>
-
-
-  <div class="middle-container">
+  <section id="about" class="middle-container">
 
     <!-- SUMMARY -->
     <div class="skills">
@@ -75,6 +126,7 @@
       </p>
     </div>
     <!-- EXPERIENCE -->
+<section id="experience">
 <div class="skills skills--primary">
   <h2>Experience</h2>
 
@@ -115,9 +167,10 @@
     </div>
   </div>
 </div>
-
+</section>
 
     <!-- SKILLS -->
+<section id="skills">
 <div class="skills">
   <h2>Technical Skills</h2>
 
@@ -164,11 +217,10 @@
     </div>
   </div>
 </div>
-
-
-
+</section>
 
     <!-- EDUCATION & COURSES -->
+<section id="education">
 <div class="skills">
   <h2>Education &amp; Courses</h2>
 
@@ -212,16 +264,14 @@
     
   </div>
 </div>
+</section>
 
-
-  </div>
+  </section>
 
   <!-- FOOTER -->
-  <div class="bottom-container">
+  <footer id="contact" class="bottom-container">
   <button class="contact-btn" id="openForm">Contact Me</button>
   <p class="copyright">© <span id="year"></span> Alexios Kola</p>
-</div>
-
   <!-- Inline collapsible contact form -->
   <div id="contactPanel" class="contact-panel" hidden>
     <h2>Get in touch</h2>
@@ -233,10 +283,42 @@
     </form>
     <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
   </div>
-</div>
+</footer>
+</main>
 
 
 
+
+  <!-- Back to top button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Structured Data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alexios Kola",
+    "jobTitle": "Full Stack Web Developer",
+    "description": "Full Stack Developer with 2+ years of experience building scalable web applications using C#, JavaScript, SQL, and modern front-end frameworks.",
+    "url": "https://your-domain.com",
+    "image": "https://your-domain.com/1674450168751.jpeg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Athens",
+      "addressCountry": "Greece"
+    },
+    "telephone": "+306987164394",
+    "email": "kola.alfons.alexios@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/alexios-kola/",
+      "https://github.com/alexkola94",
+      "https://alexkola94.github.io/My_Portfolio"
+    ],
+    "knowsAbout": ["C#", "JavaScript", "SQL", "HTML", "CSS", "Bootstrap", "Knockout.js", "jQuery", ".NET", "Git", "Visual Studio", "REST APIs"]
+  }
+  </script>
 
   <script>
     // tiny helper to keep footer year current
@@ -245,6 +327,5 @@
 
 <script src="script.js" defer></script>
 </body>
-
 
 </html>
